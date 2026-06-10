@@ -1,0 +1,14 @@
+
+
+services:
+  snapbook-app:
+    build: .
+    container_name: snapbook-container
+
+    ports:
+      - "5055:5055"
+
+    env_file:
+      - ./backend/.env
+
+    restart: unless-stopped
